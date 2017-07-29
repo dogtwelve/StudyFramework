@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Textures>
+	<Texture alias="effects" file="Textures/FX/effects.pvr">
+		<Mappings>
+            <!-- [1-7] explosion frames -->
+			<Mapping x="0" y="0" width="128" height="128"/>
+			<Mapping x="128" y="0" width="128" height="128"/>
+			<Mapping x="256" y="0" width="128" height="128"/>
+			<Mapping x="384" y="0" width="128" height="128"/>
+			<Mapping x="0" y="128" width="128" height="128"/>
+			<Mapping x="128" y="128" width="128" height="128"/>
+			<Mapping x="256" y="128" width="128" height="128"/>
+
+            <!-- [8] glow 1 -->
+			<Mapping x="384" y="128" width="128" height="128"/>
+
+            <!-- [9] glow 2 -->
+			<Mapping x="0" y="256" width="128" height="128"/>
+
+            <!-- [10] ring wave -->
+			<Mapping x="0" y="384" width="128" height="128"/>
+
+            <!-- [11] spark -->
+			<Mapping x="480" y="480" width="32" height="32"/>
+
+            <!-- [12] glow 3 -->
+			<Mapping x="128" y="384" width="128" height="128"/>
+			
+            <!-- [13-14] gauss frames -->
+			<Mapping x="352" y="384" width="64" height="128"/>
+			<Mapping x="416" y="384" width="64" height="128"/>
+		</Mappings>
+	</Texture>
+	<Texture alias="units" file="Models/units/units.pvr" />
+	<Texture alias="objects" file="Models/objects/objects.pvr" />
+	<Texture alias="bonus_01" file="Models/Bonuses/bonus_01.pvr" />
+	<Texture alias="bonus_02" file="Models/Bonuses/bonus_02.pvr" />
+	<Texture alias="land_02" file="Models/Land_objects_02/land_02.pvr" />
+	<Texture alias="land_03" file="Models/Land_objects_03/land_03.pvr" />
+	<Texture alias="land_02_objs" file="Models/Land_objects_02/land_02_objs.pvr" />
+</Textures>
+<Models>
+	<Model alias="helicopter_small" file="Models/units/helicopter_small/helicopter_small.xml"/>
+	<Model alias="helicopter_small_destruction" file="Models/units/helicopter_small/helicopter_small_destruction.xml"/>
+	<Model alias="helicopter_medium" file="Models/units/helicopter_medium/helicopter_medium.xml"/>
+	<Model alias="helicopter_medium_destruction" file="Models/units/helicopter_medium/helicopter_medium_destruction.xml"/>
+	<Model alias="helicopter_big" file="Models/units/helicopter_big/helicopter_big.xml"/>
+	<Model alias="plane_small" file="Models/units/plane_small/plane_small.xml"/>
+	<Model alias="plane_small_destruction" file="Models/units/plane_small/plane_small_destruction.xml"/>
+	<Model alias="bonus_01" file="Models/Bonuses/bonus_01.xml"/>
+	<Model alias="bonus_02" file="Models/Bonuses/bonus_02.xml"/>
+	<Model alias="bush_01" file="Models/Land_objects_02/bush/bush_01.xml"/>
+	<Model alias="palm_01" file="Models/Land_objects_02/palm/palm_01.xml" />
+	<Model alias="palm_02" file="Models/Land_objects_02/palm/palm_02.xml" />
+	<Model alias="cactus_01" file="Models/Land_objects_02/cactus/cactus_01.xml"/>
+	<Model alias="cactus_02" file="Models/Land_objects_02/cactus/cactus_02.xml"/>
+	<Model alias="cactus_03" file="Models/Land_objects_02/cactus/cactus_03.xml"/>
+	<Model alias="stone_01" file="Models/Land_objects_02/stone/stone_01.xml"/>
+	<Model alias="stone_02" file="Models/Land_objects_02/stone/stone_02.xml"/>
+	<Model alias="stone_03" file="Models/Land_objects_02/stone/stone_03.xml"/>
+	<Model alias="stone_04" file="Models/Land_objects_02/stone/stone_04.xml"/>
+	<Model alias="stone_05" file="Models/Land_objects_02/stone/stone_05.xml"/>
+	<Model alias="stone_06" file="Models/Land_objects_02/stone/stone_06.xml"/>
+	<Model alias="stone_07" file="Models/Land_objects_02/stone/stone_07.xml"/>
+	<Model alias="rock_01" file="Models/Land_objects_02/rock/rock_01.xml"/>
+	<Model alias="square" file="Models/Land_objects_02/roads/square.xml"/>
+	<Model alias="prop01" file="Models/objects/props/prop01.xml"/>
+	<Model alias="prop02" file="Models/objects/props/prop02.xml"/>
+	<Model alias="prop03" file="Models/objects/props/prop03.xml"/>
+	<Model alias="prop04" file="Models/objects/props/prop04.xml"/>
+	<Model alias="prop05" file="Models/objects/props/prop05.xml"/>
+	<Model alias="prop06" file="Models/objects/props/prop06.xml"/>
+	<Model alias="prop07" file="Models/objects/props/prop07.xml"/>
+	<Model alias="prop08" file="Models/objects/props/prop08.xml"/>
+	<Model alias="prop09" file="Models/objects/props/prop09.xml"/>
+	<Model alias="prop10" file="Models/objects/props/prop10.xml"/>
+	<Model alias="prop11" file="Models/objects/props/prop11.xml"/>
+	<Model alias="prop12" file="Models/objects/props/prop12.xml"/>
+</Models>
+<Sprites>
+</Sprites>

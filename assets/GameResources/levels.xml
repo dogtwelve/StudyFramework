@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Levels>
+	<Level alias="level_02" file="Levels/Level_02/level_02.xml" />
+</Levels>
