@@ -25,7 +25,7 @@
 
 #ifdef __APPLE__
 #include <TargetConditionals.h>
-#if (TARGET_IPHONE_SIMULATOR == 0) && (TARGET_OS_IPHONE == 1)
+#if (TARGET_IPHONE_SIMULATOR == 0) && (TARGET_OS_IPHONE == 1) && defined(_ARM_ARCH_7)
 #include "neonmath/neon_matrix_impl.h"
 #endif
 #endif
@@ -107,7 +107,7 @@ void MatrixGetBasis(
  ****************************************************************************/
 void MatrixMultiply(OGMatrix& mOut, const OGMatrix& mA, const OGMatrix& mB)
 {
-#if (TARGET_IPHONE_SIMULATOR == 0) && (TARGET_OS_IPHONE == 1)
+#if (TARGET_IPHONE_SIMULATOR == 0) && (TARGET_OS_IPHONE == 1) && defined(_ARM_ARCH_7)
     NEON_Matrix4Mul( mA.f, mB.f, mOut.f );
 #else	
 	OGMatrix mRet;
@@ -148,7 +148,7 @@ void MatrixMultiply(OGMatrix& mOut, const OGMatrix& mA, const OGMatrix& mB)
  ****************************************************************************/
 void MatrixVec4Multiply(OGVec4& vOut, const OGVec4& vIn, const OGMatrix& mIn)
 {
-#if (TARGET_IPHONE_SIMULATOR == 0) && (TARGET_OS_IPHONE == 1)
+#if (TARGET_IPHONE_SIMULATOR == 0) && (TARGET_OS_IPHONE == 1) && defined(_ARM_ARCH_7)
 	NEON_Matrix4Vector4Mul( mIn.f, &vIn.x, &vOut.x );
 #else
 	OGVec4 result;
