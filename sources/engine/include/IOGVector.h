@@ -264,8 +264,8 @@ struct OGVec2
 
     /*!***************************************************************************
      @Function			rotated90
-     @Returns			returns the vector rotated 90ﾰ
-     @Description		returns the vector rotated 90ﾰ
+     @Returns			returns the vector rotated 90 degree
+     @Description		returns the vector rotated 90 degree
      ****************************************************************************/
     OGVec2 rotated90() const
     {
