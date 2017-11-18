@@ -20,7 +20,7 @@
 #include "Game.h"
 
 #define TIMER_ID	1
-#define TIMER_RATE	30
+#define TIMER_RATE	20
 
 
 IOGGameSystem*  pGameSystem = NULL;
@@ -168,9 +168,9 @@ BOOL InitInstance ( HINSTANCE hInstance, int nCmdShow )
 		SetForegroundWindow ((HWND)(((__int64)shWnd) | 0x01));    
 		return FALSE;
 	} 
-	int scale_factor = 1.8;
-	GetGlobalVars()->SetIVar("view_width", 480 * scale_factor);
-	GetGlobalVars()->SetIVar("view_height", 800 * scale_factor);
+	double scale_factor = 1.0f;
+	GetGlobalVars()->SetIVar("view_width",  static_cast<int>(480 * scale_factor));
+	GetGlobalVars()->SetIVar("view_height", static_cast<int>(800 * scale_factor));
 	GetAppSettings()->Init("settings.xml");
 
 	if (CmdParams.size() == 2)
@@ -234,7 +234,7 @@ int WINAPI WinMain( HINSTANCE hInstance,
 {
     char path[OG_MAX_PATH];
     GetResourcePathASCII(path, OG_MAX_PATH);
-    std::string strPath = std::string(path) + std::string("/../assets/");
+    std::string strPath = std::string(path) + std::string("/../../assets/");
     //std::string strPath = std::string(path) + std::string("/orange-grass.apk");
     StartOrangeGrass(strPath, false);
     StartGameCore();

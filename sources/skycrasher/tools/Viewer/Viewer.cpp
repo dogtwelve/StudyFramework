@@ -30,7 +30,7 @@ bool CViewerApp::OnInit()
 {
     char path[OG_MAX_PATH];
     GetResourcePathASCII(path, OG_MAX_PATH);
-    std::string strPath = std::string(path) + std::string("/../assets/");
+    std::string strPath = std::string(path) + std::string("/../../assets/");
     StartOrangeGrass(strPath, false);
     StartGameCore();
 
