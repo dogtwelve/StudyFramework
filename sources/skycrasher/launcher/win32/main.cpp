@@ -168,9 +168,9 @@ BOOL InitInstance ( HINSTANCE hInstance, int nCmdShow )
 		SetForegroundWindow ((HWND)(((__int64)shWnd) | 0x01));    
 		return FALSE;
 	} 
-
-	GetGlobalVars()->SetIVar("view_width", 480);
-	GetGlobalVars()->SetIVar("view_height", 800);
+	int scale_factor = 1.8;
+	GetGlobalVars()->SetIVar("view_width", 480 * scale_factor);
+	GetGlobalVars()->SetIVar("view_height", 800 * scale_factor);
 	GetAppSettings()->Init("settings.xml");
 
 	if (CmdParams.size() == 2)
