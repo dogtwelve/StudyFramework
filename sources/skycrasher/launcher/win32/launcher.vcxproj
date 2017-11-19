@@ -109,7 +109,7 @@
       <Command>copy ..\..\..\..\bin\$(PlatformName)\skycrasher\launcher\launcher.exe ..\..\..\..\version\$(PlatformName)\orange-grass.exe</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>..\..\..\..\version\$(PlatformName)\reset_log.bat</Command>
+      <Command>del /S /Q ..\..\..\..\version\$(PlatformName)\log.txt</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -134,7 +134,7 @@
       <Command>copy ..\..\..\..\bin\$(PlatformName)\skycrasher\launcher\launcher.exe ..\..\..\..\version\$(PlatformName)\orange-grass.exe</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>..\..\..\..\version\$(PlatformName)\reset_log.bat</Command>
+      <Command>del /S /Q ..\..\..\..\version\$(PlatformName)\log.txt</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
