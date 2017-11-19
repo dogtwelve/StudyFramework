@@ -87,6 +87,7 @@ void GetResourcePathASCII(char* _pOutPath, int _PathLength)
 	
 	// create a full-screen window
 	_window = [[UIWindow alloc] initWithFrame:rect];
+    
 	
 	// create the OpenGL view and add it to the window
 	_glView = [[EAGLCameraView alloc] initWithFrame:rect pixelFormat:GL_RGB565 depthFormat:GL_DEPTH_COMPONENT16 preserveBackbuffer:NO];
@@ -95,6 +96,11 @@ void GetResourcePathASCII(char* _pOutPath, int _PathLength)
     
 	// show the window
 	[_window makeKeyAndVisible];
+    
+    
+    UIViewController* vc = [[UIViewController alloc]initWithNibName:nil bundle:nil];
+    
+    _window.rootViewController = vc;
     
     accel = [Accel alloc];
     [accel SetupAccelerometer: kFPS];

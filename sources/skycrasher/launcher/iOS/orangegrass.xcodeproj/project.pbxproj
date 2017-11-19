@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,7 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
 		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
+		54AEFD0E1FBA8BAF00E3B7CE /* ogshadowedtranspsceneshader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 54AEFD0D1FBA8BAE00E3B7CE /* ogshadowedtranspsceneshader.cpp */; };
 		B20F127518FA9F5B00370B1B /* ogdynvertexbuffers.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B20F127318FA9F5B00370B1B /* ogdynvertexbuffers.cpp */; };
 		B20F127818FA9F8100370B1B /* ogshadowtranspmodelshader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B20F127618FA9F8100370B1B /* ogshadowtranspmodelshader.cpp */; };
 		B20F127A18FAA21C00370B1B /* GameResources in Resources */ = {isa = PBXBuildFile; fileRef = B20F127918FAA21C00370B1B /* GameResources */; };
@@ -149,6 +150,8 @@
 		28FD15070DC6FC5B0079059D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* orangegrass_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orangegrass_Prefix.pch; sourceTree = "<group>"; };
+		54AEFD0C1FBA8B8D00E3B7CE /* ogshadowedtranspsceneshader.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = ogshadowedtranspsceneshader.h; path = ../../../engine/src/ogshadowedtranspsceneshader.h; sourceTree = "<group>"; };
+		54AEFD0D1FBA8BAE00E3B7CE /* ogshadowedtranspsceneshader.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = ogshadowedtranspsceneshader.cpp; path = ../../../engine/src/ogshadowedtranspsceneshader.cpp; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* orangegrass-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "orangegrass-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 		B20F127318FA9F5B00370B1B /* ogdynvertexbuffers.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = ogdynvertexbuffers.cpp; path = ../../../engine/src/ogdynvertexbuffers.cpp; sourceTree = "<group>"; };
 		B20F127418FA9F5B00370B1B /* ogdynvertexbuffers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ogdynvertexbuffers.h; path = ../../../engine/src/ogdynvertexbuffers.h; sourceTree = "<group>"; };
@@ -182,8 +185,8 @@
 		B211E49514AD0062006DC372 /* ogvector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ogvector.cpp; path = ../../../engine/src/ogvector.cpp; sourceTree = "<group>"; };
 		B211E49914AD00AE006DC372 /* ogshader.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = ogshader.cpp; path = ../../../engine/src/ogshader.cpp; sourceTree = "<group>"; };
 		B211E49A14AD00AE006DC372 /* ogshader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ogshader.h; path = ../../../engine/src/ogshader.h; sourceTree = "<group>"; };
-		B211E49B14AD00AE006DC372 /* ogshadowedsceneshader.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = ogshadowedsceneshader.cpp; path = ../../../engine/src/ogshadowedsceneshader.cpp; sourceTree = "<group>"; };
-		B211E49C14AD00AE006DC372 /* ogshadowedsceneshader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ogshadowedsceneshader.h; path = ../../../engine/src/ogshadowedsceneshader.h; sourceTree = "<group>"; };
+		B211E49B14AD00AE006DC372 /* ogshadowedsceneshader.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = ogshadowedsceneshader.cpp; path = ../../../engine/src/ogshadowedsceneshader.cpp; sourceTree = SOURCE_ROOT; };
+		B211E49C14AD00AE006DC372 /* ogshadowedsceneshader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ogshadowedsceneshader.h; path = ../../../engine/src/ogshadowedsceneshader.h; sourceTree = SOURCE_ROOT; };
 		B211E4A214AD00E5006DC372 /* ogresourcefile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ogresourcefile.cpp; path = ../../../engine/src/ogresourcefile.cpp; sourceTree = "<group>"; };
 		B211E4A314AD00E5006DC372 /* ogresourcefile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ogresourcefile.h; path = ../../../engine/src/ogresourcefile.h; sourceTree = "<group>"; };
 		B211E4A614AD0389006DC372 /* Accelerometer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Accelerometer.h; sourceTree = "<group>"; };
@@ -824,6 +827,8 @@
 		B2BD48DD12EBC366005A7210 /* Shaders */ = {
 			isa = PBXGroup;
 			children = (
+				54AEFD0D1FBA8BAE00E3B7CE /* ogshadowedtranspsceneshader.cpp */,
+				54AEFD0C1FBA8B8D00E3B7CE /* ogshadowedtranspsceneshader.h */,
 				B20F127618FA9F8100370B1B /* ogshadowtranspmodelshader.cpp */,
 				B20F127718FA9F8100370B1B /* ogshadowtranspmodelshader.h */,
 				B299E7D21697078E00F3A6F9 /* ogshadermanager.cpp */,
@@ -1147,9 +1152,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0500;
+				TargetAttributes = {
+					1D6058900D05DD3D006BFB54 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "orangegrass" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -1285,6 +1295,7 @@
 				B211E4A414AD00E5006DC372 /* ogresourcefile.cpp in Sources */,
 				B211E4AA14AD0389006DC372 /* Accelerometer.m in Sources */,
 				B211E4AB14AD0389006DC372 /* TouchScreen.mm in Sources */,
+				54AEFD0E1FBA8BAF00E3B7CE /* ogshadowedtranspsceneshader.cpp in Sources */,
 				B2E3706F14B0DEEB0036B723 /* ioapi.c in Sources */,
 				B2E3707114B0DEEB0036B723 /* unzip.c in Sources */,
 				B2E3707214B0DEEB0036B723 /* zip.c in Sources */,
@@ -1321,9 +1332,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_ENTITLEMENTS = orangegrass.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Viacheslav Bogdanov (98HN8A7PMY)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Viacheslav Bogdanov (98HN8A7PMY)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 63973Y9GM7;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1336,12 +1348,14 @@
 					../../../skycrasher/game/launcher/iOS,
 				);
 				INFOPLIST_FILE = "orangegrass-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dt.orangegrass;
 				PRODUCT_NAME = orangegrass;
-				PROVISIONING_PROFILE = "DCEFC99C-98BA-4AF2-8A97-7F6FC7F351B6";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DCEFC99C-98BA-4AF2-8A97-7F6FC7F351B6";
-				TARGETED_DEVICE_FAMILY = 2;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1350,9 +1364,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_ENTITLEMENTS = orangegrass.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Viacheslav Bogdanov (98HN8A7PMY)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Viacheslav Bogdanov (98HN8A7PMY)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = 63973Y9GM7;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = orangegrass_Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
@@ -1363,12 +1378,14 @@
 					../../../skycrasher/game/launcher/iOS,
 				);
 				INFOPLIST_FILE = "orangegrass-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dt.orangegrass;
 				PRODUCT_NAME = orangegrass;
-				PROVISIONING_PROFILE = "DCEFC99C-98BA-4AF2-8A97-7F6FC7F351B6";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "DCEFC99C-98BA-4AF2-8A97-7F6FC7F351B6";
-				TARGETED_DEVICE_FAMILY = 2;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
