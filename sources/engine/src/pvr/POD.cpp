@@ -300,6 +300,7 @@ static bool ReadCPODData(
 
 	while(src.ReadMarker(nName, nLen))
 	{
+		OG_LOG_INFO("POD->Read->ReadScene->ReadMesh->ReadCPODData nName = %d", nName);
 		if(nName == (nSpec | PVRTMODELPOD_TAG_END))
 			return true;
 
@@ -440,6 +441,7 @@ static bool ReadMesh(
 
 	while(src.ReadMarker(nName, nLen))
 	{
+		OG_LOG_INFO("POD->Read->ReadScene->ReadMesh nName = %d", nName);
 		switch(nName)
 		{
 		case ePODFileMesh | PVRTMODELPOD_TAG_END:
@@ -593,6 +595,7 @@ static bool ReadScene(
 
 	while(src.ReadMarker(nName, nLen))
 	{
+		OG_LOG_INFO("POD->Read->ReadScene nName = %d", nName);
 		switch(nName)
 		{
 		case ePODFileScene | PVRTMODELPOD_TAG_END:
@@ -657,6 +660,7 @@ static bool Read(
 
 	while(src.ReadMarker(nName, nLen))
 	{
+		OG_LOG_INFO("POD->Read nName = %d", nName);
 		switch(nName)
 		{
 		case ePODFileVersion:
