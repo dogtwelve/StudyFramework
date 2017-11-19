@@ -108,6 +108,9 @@
     <PostBuildEvent>
       <Command>copy ..\..\..\..\bin\$(PlatformName)\skycrasher\launcher\launcher.exe ..\..\..\..\version\$(PlatformName)\orange-grass.exe</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>..\..\..\..\version\$(PlatformName)\reset_log.bat</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -130,6 +133,9 @@
     <PostBuildEvent>
       <Command>copy ..\..\..\..\bin\$(PlatformName)\skycrasher\launcher\launcher.exe ..\..\..\..\version\$(PlatformName)\orange-grass.exe</Command>
     </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>..\..\..\..\version\$(PlatformName)\reset_log.bat</Command>
+    </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
