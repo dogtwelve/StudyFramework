@@ -317,7 +317,8 @@ static bool ReadCPODData(
             { 
 				//if(!src.Read(s.pData)) return false; 
 				//fix for 32bit and 64bit compatible
-                if(!src.ReadAfterAlloc(s.pData, 4)) return false; 
+				const unsigned int DATA_SIZE  = 4;
+                if(!src.Skip(DATA_SIZE)) return false; 
             }
             break;
 
