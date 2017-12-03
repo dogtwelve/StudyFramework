@@ -84,17 +84,17 @@ void MatrixGetBasis(
     OGVec3& vOutZ, 
     const OGMatrix& mIn)
 {
-    vOutX.x = mIn.f[_11];
-    vOutX.y = mIn.f[_21];
-    vOutX.z = mIn.f[_31];
+    vOutX.x = mIn.f[MATRIX_11];
+    vOutX.y = mIn.f[MATRIX_21];
+    vOutX.z = mIn.f[MATRIX_31];
     
-    vOutY.x = mIn.f[_12];
-    vOutY.y = mIn.f[_22];
-    vOutY.z = mIn.f[_32];
+    vOutY.x = mIn.f[MATRIX_12];
+    vOutY.y = mIn.f[MATRIX_22];
+    vOutY.z = mIn.f[MATRIX_32];
     
-    vOutZ.x = mIn.f[_13];
-    vOutZ.y = mIn.f[_23];
-    vOutZ.z = mIn.f[_33];
+    vOutZ.x = mIn.f[MATRIX_13];
+    vOutZ.y = mIn.f[MATRIX_23];
+    vOutZ.z = mIn.f[MATRIX_33];
 }
 
 
@@ -154,10 +154,10 @@ void MatrixVec4Multiply(OGVec4& vOut, const OGVec4& vIn, const OGMatrix& mIn)
 	OGVec4 result;
 	
 	/* Perform calculation on a dummy VECTOR (result) */
-	result.x = mIn.f[_11] * vIn.x + mIn.f[_21] * vIn.y + mIn.f[_31] * vIn.z + mIn.f[_41] * vIn.w;
-	result.y = mIn.f[_12] * vIn.x + mIn.f[_22] * vIn.y + mIn.f[_32] * vIn.z + mIn.f[_42] * vIn.w;
-	result.z = mIn.f[_13] * vIn.x + mIn.f[_23] * vIn.y + mIn.f[_33] * vIn.z + mIn.f[_43] * vIn.w;
-	result.w = mIn.f[_14] * vIn.x + mIn.f[_24] * vIn.y + mIn.f[_34] * vIn.z + mIn.f[_44] * vIn.w;
+	result.x = mIn.f[MATRIX_11] * vIn.x + mIn.f[MATRIX_21] * vIn.y + mIn.f[MATRIX_31] * vIn.z + mIn.f[MATRIX_41] * vIn.w;
+	result.y = mIn.f[MATRIX_12] * vIn.x + mIn.f[MATRIX_22] * vIn.y + mIn.f[MATRIX_32] * vIn.z + mIn.f[MATRIX_42] * vIn.w;
+	result.z = mIn.f[MATRIX_13] * vIn.x + mIn.f[MATRIX_23] * vIn.y + mIn.f[MATRIX_33] * vIn.z + mIn.f[MATRIX_43] * vIn.w;
+	result.w = mIn.f[MATRIX_14] * vIn.x + mIn.f[MATRIX_24] * vIn.y + mIn.f[MATRIX_34] * vIn.z + mIn.f[MATRIX_44] * vIn.w;
 	
 	vOut = result;
 #endif
@@ -173,9 +173,9 @@ void MatrixVec4Multiply(OGVec4& vOut, const OGVec4& vIn, const OGMatrix& mIn)
  ****************************************************************************/
 void MatrixVecMultiply(OGVec3& vOut, const OGVec3& vIn, const OGMatrix& mIn)
 {
-	vOut.x = mIn.f[_11] * vIn.x + mIn.f[_21] * vIn.y + mIn.f[_31] * vIn.z + mIn.f[_41];
-	vOut.y = mIn.f[_12] * vIn.x + mIn.f[_22] * vIn.y + mIn.f[_32] * vIn.z + mIn.f[_42];
-	vOut.z = mIn.f[_13] * vIn.x + mIn.f[_23] * vIn.y + mIn.f[_33] * vIn.z + mIn.f[_43];
+	vOut.x = mIn.f[MATRIX_11] * vIn.x + mIn.f[MATRIX_21] * vIn.y + mIn.f[MATRIX_31] * vIn.z + mIn.f[MATRIX_41];
+	vOut.y = mIn.f[MATRIX_12] * vIn.x + mIn.f[MATRIX_22] * vIn.y + mIn.f[MATRIX_32] * vIn.z + mIn.f[MATRIX_42];
+	vOut.z = mIn.f[MATRIX_13] * vIn.x + mIn.f[MATRIX_23] * vIn.y + mIn.f[MATRIX_33] * vIn.z + mIn.f[MATRIX_43];
 }
 
 
@@ -191,9 +191,9 @@ void MatrixVec3Multiply(OGVec3& vOut, const OGVec3& vIn, const OGMatrix& mIn)
     OGVec3 result;
 
     /* Perform calculation on a dummy VECTOR (result) */
-    result.x = mIn.f[_11] * vIn.x + mIn.f[_21] * vIn.y + mIn.f[_31] * vIn.z;
-    result.y = mIn.f[_12] * vIn.x + mIn.f[_22] * vIn.y + mIn.f[_32] * vIn.z;
-    result.z = mIn.f[_13] * vIn.x + mIn.f[_23] * vIn.y + mIn.f[_33] * vIn.z;
+    result.x = mIn.f[MATRIX_11] * vIn.x + mIn.f[MATRIX_21] * vIn.y + mIn.f[MATRIX_31] * vIn.z;
+    result.y = mIn.f[MATRIX_12] * vIn.x + mIn.f[MATRIX_22] * vIn.y + mIn.f[MATRIX_32] * vIn.z;
+    result.z = mIn.f[MATRIX_13] * vIn.x + mIn.f[MATRIX_23] * vIn.y + mIn.f[MATRIX_33] * vIn.z;
 
     vOut = result;
 }

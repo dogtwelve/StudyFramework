@@ -39,22 +39,22 @@
 
 #define MAT(m,r,c) (m)[(c)*4+(r)]
 
-#define _11 0
-#define _12 1
-#define _13 2
-#define _14 3
-#define _21 4
-#define _22 5
-#define _23 6
-#define _24 7
-#define _31 8
-#define _32 9
-#define _33 10
-#define _34 11
-#define _41 12
-#define _42 13
-#define _43 14
-#define _44 15
+#define MATRIX_11 0
+#define MATRIX_12 1
+#define MATRIX_13 2
+#define MATRIX_14 3
+#define MATRIX_21 4
+#define MATRIX_22 5
+#define MATRIX_23 6
+#define MATRIX_24 7
+#define MATRIX_31 8
+#define MATRIX_32 9
+#define MATRIX_33 10
+#define MATRIX_34 11
+#define MATRIX_41 12
+#define MATRIX_42 13
+#define MATRIX_43 14
+#define MATRIX_44 15
 
 
 /*!***************************************************************************
