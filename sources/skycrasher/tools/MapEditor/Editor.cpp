@@ -30,7 +30,7 @@ bool CEditorApp::OnInit()
 {
     char path[OG_MAX_PATH];
     GetResourcePathASCII(path, OG_MAX_PATH);
-    std::string strPath = std::string(path) + std::string("/../../assets/");
+    std::string strPath = std::string(path) + std::string(GAME_ASSETS_PATH);
     StartOrangeGrass(strPath, false);
     StartGameCore();
 

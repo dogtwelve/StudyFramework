@@ -29,6 +29,8 @@
 #include "IOGGameSequence.h"
 #include "IOGGameSystem.h"
 
+#define  GAME_ASSETS_PATH  "/../../assets/"
+
 
 IOGLevelManager* GetLevelManager ();
 IOGSceneGraph* GetSceneGraph ();
