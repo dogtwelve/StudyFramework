@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<Model file="Levels/Level_02/level_02.POD">
+<Model file="Levels/Level_02/level_02.pod">
     <Mesh shader="shadowedscene" shadowshader="shadowmodel" shadowcaster="0" shadowreceiver="1">
         <Material texture = "land_02" blend="solid">
             <Ambient r = "0.3" g = "0.3" b = "0.3" a = "1.0" />
