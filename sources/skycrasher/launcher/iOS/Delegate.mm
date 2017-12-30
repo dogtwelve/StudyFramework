@@ -83,24 +83,52 @@ void GetResourcePathASCII(char* _pOutPath, int _PathLength)
 
 - (void) applicationDidFinishLaunching:(UIApplication*)application
 {
-	CGRect	rect = [[UIScreen mainScreen] bounds];
+    //CGRect	rect = [[UIScreen mainScreen] bounds];
 	
-	// create a full-screen window
-	_window = [[UIWindow alloc] initWithFrame:rect];
+    // // create a full-screen window
+    // _window = [[UIWindow alloc] initWithFrame:rect];
+    // Add the view controller's view to the window and display.
+    _window = [[UIWindow alloc] initWithFrame: [[UIScreen mainScreen] bounds]];
     
 	
 	// create the OpenGL view and add it to the window
-	_glView = [[EAGLCameraView alloc] initWithFrame:rect pixelFormat:GL_RGB565 depthFormat:GL_DEPTH_COMPONENT16 preserveBackbuffer:NO];
+	//_glView = [[EAGLCameraView alloc] initWithFrame:rect pixelFormat:GL_RGB565 depthFormat:GL_DEPTH24_STENCIL8_OES preserveBackbuffer:NO];
+
+    _glView = [EAGLView viewWithFrame: [window bounds]
+                                     pixelFormat: GL_RGB565
+                                     depthFormat: GL_DEPTH24_STENCIL8_OES
+                              preserveBackbuffer: NO
+                                      sharegroup: nil
+                                   multiSampling: NO
+                                 numberOfSamples: 0];
+     [_glView setMultipleTouchEnabled:YES];
+
+    // UIViewController* vc = [[UIViewController alloc]initWithNibName:nil bundle:nil];
+
+    // _window.rootViewController = vc;
+
+    // Use RootViewController manage EAGLView 
+    _viewController = [[RootViewController alloc] initWithNibName:nil bundle:nil];
+    _viewController.wantsFullScreenLayout = YES;
+    _viewController.view = _glView;
+
+    // Set RootViewController to window
+    if ( [[UIDevice currentDevice].systemVersion floatValue] < 6.0)
+    {
+        // warning: addSubView doesn't work on iOS6
+        [_window addSubview: _viewController.view];
+    }
+    else
+    {
+        // use this method on ios6
+        [_window setRootViewController:_viewController];
+    }
 	
-	[_window addSubview:_glView];
+	// [_window addSubview:_glView];
     
 	// show the window
 	[_window makeKeyAndVisible];
     
-    
-    UIViewController* vc = [[UIViewController alloc]initWithNibName:nil bundle:nil];
-    
-    _window.rootViewController = vc;
     
     accel = [Accel alloc];
     [accel SetupAccelerometer: kFPS];

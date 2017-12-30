@@ -5,6 +5,7 @@
 {
 	UIWindow*			_window;
 	EAGLView*			_glView;
+	RootViewController* _viewController;
 }
 
 
